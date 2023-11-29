@@ -14,7 +14,7 @@ public class Ejercicioo10 {
 			do {
 				System.out.println("Dime el nombre del alumno");
 				
-			}while()
+			}while(true);
 			
 		}
 	}
