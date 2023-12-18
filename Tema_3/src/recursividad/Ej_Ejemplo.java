@@ -1,6 +1,6 @@
 package recursividad;
 
-public class Recursividad {
+public class Ej_Ejemplo {
 
 	public static void main(String[] args) {
 		Integer resultado = sumar(100);
