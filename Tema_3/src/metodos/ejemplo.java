@@ -1,4 +1,4 @@
-package tema4;
+package metodos;
 
 import java.util.Scanner;
 
