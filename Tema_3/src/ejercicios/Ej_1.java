@@ -1,4 +1,4 @@
-package tema4_ejercicios;
+package ejercicios;
 
 import java.util.Scanner;
 

@@ -13,7 +13,7 @@ public class ejercicioLibros {
 		System.out.println(x.getTitulo());
 		System.out.println(x.getEditorial());
 		System.out.println(x.getAutor());
-		System.out.println(x.getNumPagina());
+		System.out.println(x.getNumPagina() + " " + "paginas");
 	}
 
 }
