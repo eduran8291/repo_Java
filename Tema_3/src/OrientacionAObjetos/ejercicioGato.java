@@ -1,6 +1,6 @@
 package OrientacionAObjetos;
 
-public class appGato {
+public class ejercicioGato {
 
 	public static void main(String[] args) {
 		Gato bigotitos = new Gato();
