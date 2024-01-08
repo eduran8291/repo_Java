@@ -3,7 +3,6 @@ package OrientacionAObjetos;
 public class Libro {
 
 		//creamos atributos
-		private static String material;
 		private String titulo;
 		private String autor;
 		private Integer numPagina;
