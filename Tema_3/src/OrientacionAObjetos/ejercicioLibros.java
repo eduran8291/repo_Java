@@ -1,19 +1,24 @@
 package OrientacionAObjetos;
 
+import java.util.Scanner;
+
 public class ejercicioLibros {
 
 	public static void main(String[] args) {
-		Libro x = new Libro();
+		Scanner sc = new Scanner(System.in);
+		Libro lib1 = new Libro();
 	    
-		x.setTitulo("El valle de los lobos");
-		x.setEditorial("anaya");
-		x.setNumPagina(271);
-		x.setAutor("Laura Gallego Garcia");
+		lib1.setTitulo("El valle de los lobos");
+		lib1.setEditorial("anaya");
+		lib1.setNumPagina(271);
+		lib1.setAutor("Laura Gallego Garcia");
 		
-		System.out.println(x.getTitulo());
-		System.out.println(x.getEditorial());
-		System.out.println(x.getAutor());
-		System.out.println(x.getNumPagina() + " " + "paginas");
+		System.out.println(lib1.getTitulo());
+		System.out.println(lib1.getEditorial());
+		System.out.println(lib1.getAutor());
+		System.out.println(lib1.getNumPagina() + " " + "paginas");
+		
+		
 	}
 
 }
