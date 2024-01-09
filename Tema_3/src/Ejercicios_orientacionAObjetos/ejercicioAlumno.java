@@ -1,4 +1,4 @@
-package EJ_18_orientacionAObjetos;
+package Ejercicios_orientacionAObjetos;
 
 import java.util.Scanner;
 
