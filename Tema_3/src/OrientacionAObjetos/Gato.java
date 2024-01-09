@@ -1,7 +1,7 @@
 package OrientacionAObjetos;
 
 public class Gato {
-	private String nombre;
+	private String nombre;	
 	private String raza;
 	private Integer edad;
 	

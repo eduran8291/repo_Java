@@ -6,8 +6,13 @@ public class Alumno {
 	private Integer edad;
 	private Integer nota;
 	
+	public Alumno(String dni) {
+		this.dni = dni;
+	}
 	public void aprobar() {
+		if(nota < 5) {
 		this.nota = 5;
+		}
 	}
 
 	public String getDni() {
