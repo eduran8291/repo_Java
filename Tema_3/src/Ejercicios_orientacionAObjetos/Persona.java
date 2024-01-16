@@ -1,8 +1,8 @@
 package Ejercicios_orientacionAObjetos;
 
 public class Persona {
-	private String nombre;
-	private Integer edad;
+	protected String nombre;
+	protected Integer edad;
 	public String getNombre() {
 		return nombre;
 	}

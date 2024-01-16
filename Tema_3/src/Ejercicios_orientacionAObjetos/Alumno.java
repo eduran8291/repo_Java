@@ -6,9 +6,9 @@ import java.util.regex.Pattern;
 
 public class Alumno extends Persona {
 
-	private String dni;
-	private Integer nota;
-	private Curso curso;
+	protected String dni;
+	protected Integer nota;
+	protected Curso curso;
 
 	public Curso getCurso() {
 		return curso;
@@ -71,15 +71,10 @@ public class Alumno extends Persona {
 	}
 
 	public Boolean validarDni() {
-		if (this.dni != null && !this.dni.isEmpty()) {
-			Pattern patron = Pattern.compile("[0-9]{7,8}[A-Z a-z]");
-			Matcher match = patron.matcher(this.dni);
-			if (match.matches()) {
-				return true;
-			} 
-			return false;
-		}
-		return false;
+		return(dni==null || dni.isEmpty() || dni.length() == 9 );
 	}
-
+	
+	public Boolean validar() {
+		return(validarDni() && this.curso != null && this.nombre != null && nombre.length() >= 10 && this.edad != null && edad >= 12 && edad <= 65);
+	}
 }
