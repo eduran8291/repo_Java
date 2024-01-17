@@ -2,7 +2,7 @@ package EjerciciosPt5_orientacionAObjetos;
 
 import java.util.Scanner;
 
-public class App {
+public class AppReloj {
 
 	public static void main(String[] args) {
 		// 1
