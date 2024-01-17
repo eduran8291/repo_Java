@@ -1,4 +1,4 @@
-package Ejercicios_orientacionAObjetos;
+package EjerciciosPt4_orientacionAObjetos;
 
 import java.util.Scanner;
 

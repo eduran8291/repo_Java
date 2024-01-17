@@ -1,4 +1,4 @@
-package Ejercicios_orientacionAObjetos;
+package EjerciciosPt4_orientacionAObjetos;
 
 public class Persona {
 	protected String nombre;
