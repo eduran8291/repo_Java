@@ -52,7 +52,7 @@ public class Equipo {
 
 	@Override
 	public String toString() {
-		return "Real Madrid C.F. – Capitán: Marcelo – Jugadores: [1 – Courtois, 2- Carvajal, …]";
+		return nombre + "-" + capitan + "-" + "jugadores" + " " + listaDeJugador;
 	}
 	
 	

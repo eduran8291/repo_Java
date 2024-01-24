@@ -3,6 +3,12 @@ package Ejercicio41;
 public class Resultado {
 	private Integer golesLocales;
 	private Integer golesVisitante;
+	
+	public Resultado() {
+		golesLocales = 0;
+		golesVisitante = 0;
+	}
+	
 	public Integer getGolesLocales() {
 		return golesLocales;
 	}
