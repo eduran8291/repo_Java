@@ -1,14 +1,17 @@
 package EjerciciosPt4_orientacionAObjetos;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Curso {
 	
 	private String identificador;
 	private String descripcion;
-	protected Alumno[] alumnos;
+	protected List<Alumno> alumnos;
 	
 	
-	public Curso(Integer numeroAlumnos) {
-		this.alumnos = new Alumno[numeroAlumnos] ;
+	public Curso() {
+		this.alumnos = new ArrayList<>();
 	}
 	public String getIdentificador() {
 		return identificador;
@@ -16,18 +19,12 @@ public class Curso {
 	public void setIdentificador(String identificador) {
 		this.identificador = identificador;
 	}
-	public Alumno[] getAlumnos() {
+	public List<Alumno> getAlumnos() {
 		return alumnos;
 	}
 	
 	public void addAlumnos(Alumno alumno) {
-		for (Alumno y : alumnos) {
-			if(y == null) {
-				y = alumno;
-				return;
-			}
-		}
-		
+		alumnos.add(alumno);		
 	}
 	
 	public String getDescripcion() {

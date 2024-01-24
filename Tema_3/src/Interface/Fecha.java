@@ -1,8 +1,17 @@
-package Listas;
+package Interface;
 
 public interface Fecha {
-	
+	/**Cambiar la fecha actual con el dia, mes y año indicados
+	 * @param dia
+	 * @param mes
+	 * @param año
+	 */
+	 
 	public void cambiar(Integer dia,Integer mes,Integer año);
+	/**Cambiar la fecha actual por el dia, mes y año del dia
+	 * 
+	 * @param hoy
+	 */
 	
 	public void actual(String hoy);
 	
@@ -11,6 +20,11 @@ public interface Fecha {
 	public Boolean validar();
 	
 	public  void cambiarFormato(String patron);
+	/** Devuelve un booleano indicando si el objeto recibido es una fecha
+	 * con el mismo dia, mes y año de la fecha actual.
+	 * @param object
+	 * @return
+	 */
 	
 	public Boolean equals(Boolean object);
 	

@@ -1,4 +1,4 @@
-package Listas;
+package Interface;
 
 public interface ListaNumeros {
 	
