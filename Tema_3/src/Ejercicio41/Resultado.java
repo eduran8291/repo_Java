@@ -1,5 +1,7 @@
 package Ejercicio41;
 
+import java.util.Objects;
+
 public class Resultado {
 	private Integer golesLocales;
 	private Integer golesVisitante;
@@ -21,6 +23,37 @@ public class Resultado {
 	public void setGolesVisitante(Integer golesVisitante) {
 		this.golesVisitante = golesVisitante;
 	}
+
+	
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Resultado other = (Resultado) obj;
+		return Objects.equals(golesLocales, other.golesLocales) && Objects.equals(golesVisitante, other.golesVisitante);
+	}
+
+	@Override
+	public String toString() {
+		return golesLocales + "-" + golesVisitante;
+	}
+	
+	public Boolean isVictoriaLocal() {
+		return golesLocales > golesVisitante;		
+	}
+	
+	public Boolean isVictoriaVisitante() {
+		return golesVisitante > golesLocales;
+	}
+	
+	public Boolean isEmpate() {
+		return golesLocales == golesVisitante;
+	}
+	
 	
 	
 }

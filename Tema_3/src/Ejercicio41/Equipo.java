@@ -6,8 +6,19 @@ import java.util.Objects;
 public class Equipo {
 	private String nombre;
 	private Jugador capitan;
-	private List<String>listaDeJugador;
+	private List<Jugador>listaDeJugador;
+	private static String competicion;
 	
+	
+
+	public static String getCompeticion() {
+		return competicion;
+	}
+
+	public static void setCompeticion(String competicion) {
+		Equipo.competicion = competicion;
+	}
+
 	public Equipo(String nombre) {
 		this.nombre = nombre;
 	}
@@ -24,10 +35,10 @@ public class Equipo {
 	public void setCapitan(Jugador capitan) {
 		this.capitan = capitan;
 	}
-	public List<String> getListaDeJugador() {
+	public List<Jugador> getListaDeJugador() {
 		return listaDeJugador;
 	}
-	public void setListaDeJugador(List<String> listaDeJugador) {
+	public void setListaDeJugador(List<Jugador> listaDeJugador) {
 		this.listaDeJugador = listaDeJugador;
 		
 		

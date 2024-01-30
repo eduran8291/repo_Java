@@ -22,7 +22,22 @@ public class Partido {
 	public void setResultado(Resultado resultado) {
 		this.resultado = resultado;
 	}
+	public Equipo getEquipoGanador() {
+		if(resultado.isVictoriaLocal()) {
+			return equipoLocal;
+		}
+		if(resultado.isVictoriaVisitante()) {
+			return equipoVisitante;
+		}
+		return null;
+	}
+	@Override
+	public String toString() {
+		return "Partido [getEquipoLocal()=" + getEquipoLocal() + ", getEquipoVisitante()=" + getEquipoVisitante()
+				+ ", getResultado()=" + getResultado() + ", getEquipoGanador()=" + getEquipoGanador() + "]";
+	}
 	
+		
 	
 
 }
