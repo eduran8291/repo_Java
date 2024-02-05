@@ -1,8 +1,8 @@
 package Ejercicio44;
 
 public class Jugador {
-	private EquipoCombate equipo;
-	private String nombre;
+	protected EquipoCombate equipo;
+	protected String nombre;
 	
 	public EquipoCombate getEquipo() {
 		return equipo;
@@ -19,8 +19,10 @@ public class Jugador {
 	@Override
 	public String toString() {
 		return "Jugador [equipo=" + equipo + ", nombre=" + nombre + "]";
-	}
 	
+	
+		
+	}
 	
 	
 }

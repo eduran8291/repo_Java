@@ -10,8 +10,8 @@ public abstract class Personaje {
 	public static final Integer SEG_RECUPERACION_PARASITO = 1; 
 	
 	
-	private String nombre;
-	private String codigo;
+	protected String nombre;
+	protected String codigo;
 	
 	
 	

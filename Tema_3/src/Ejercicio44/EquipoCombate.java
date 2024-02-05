@@ -5,7 +5,7 @@ import java.util.List;
 
 public class EquipoCombate {
 	
-	private List<Personaje>listaPersonaje;
+	protected List<Personaje>listaPersonaje;
 	
 	public EquipoCombate() {
 		listaPersonaje = new ArrayList<>();
@@ -19,7 +19,7 @@ public class EquipoCombate {
 		this.listaPersonaje = listaPersonaje;
 	}
 
-	public void añadirPersonaje(Personaje personaje) {
+	public void addPersonaje(Personaje personaje) {
 		if(listaPersonaje.size() < 5 && !listaPersonaje.contains(personaje)) {
 			listaPersonaje.add(personaje);
 		}else {
