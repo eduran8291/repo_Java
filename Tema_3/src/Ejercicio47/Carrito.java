@@ -2,20 +2,21 @@ package Ejercicio47;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
-import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 public class Carrito {
 	private LocalDate fechaCreacion;
 	private LocalDate fechaUltimaAct;
 	private Cliente cliente;
-	private List<Articulo> articulos;
+	private Set<Articulo> articulos;
 	
 	public Carrito(Cliente cliente) {
 		this.cliente = cliente;
 		fechaCreacion = LocalDate.now();
 		fechaUltimaAct = LocalDate.now();
-		articulos = new ArrayList<Articulo>();
+		articulos = new HashSet<Articulo>();
 	}
 
 	public Integer getCantidad() {
@@ -51,8 +52,8 @@ public class Carrito {
 		articulos.add(articulo);
 		fechaUltimaAct = LocalDate.now();
 	}
-	public void borrarArticulo(int posicion) {
-		articulos.remove(posicion);
+	public void borrarArticulo(Articulo articulo) {
+		articulos.remove(articulo);
 		fechaUltimaAct = LocalDate.now();
 	}
 	public void vaciarCesta() {
@@ -72,7 +73,7 @@ public class Carrito {
 		return cliente;
 	}
 
-	public List<Articulo> getArticulos() {
+	public Set<Articulo> getArticulos() {
 		return articulos;
 	}
 	
