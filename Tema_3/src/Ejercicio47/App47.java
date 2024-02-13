@@ -1,5 +1,7 @@
 package Ejercicio47;
 
+import java.math.BigDecimal;
+
 public class App47 {
 
 	public static void main(String[] args) {
@@ -13,27 +15,26 @@ public class App47 {
 		poncho.setDescripcion("Poncho");
 		poncho.setColor("Azul");
 		poncho.setTalla("XL");
-		poncho.setPrecio(20.0);
+		poncho.setPrecio(new BigDecimal("20"));
 		
 		carrito.addArticulo(poncho);
 		carrito.addArticulo(poncho);
 		System.out.println(carrito);
 		
 		Libro libro = new Libro();
-		libro.setPrecio(15.0);
+		libro.setPrecio(new BigDecimal("15"));
 		libro.setDescripcion("Así habló Zaratustra");
 		libro.setAutor("Nietzsche");
 		
 		carrito.addArticulo(libro);
 		System.out.println(carrito);
 		
-		carrito.borrarArticulo(poncho);
+		carrito.borrarArticulo(1);
 		System.out.println(carrito);
 		System.out.println("Precio medio: " + carrito.getPrecioMedio());
 		carrito.vaciarCesta();
 		System.out.println(carrito);
 		System.out.println("Precio medio: " + carrito.getPrecioMedio());
-
 
 	}
 

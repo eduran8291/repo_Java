@@ -1,41 +1,43 @@
 package Ejercicio47;
 
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
-import java.util.HashSet;
+import java.util.ArrayList;
 import java.util.List;
-import java.util.Set;
 
 public class Carrito {
 	private LocalDate fechaCreacion;
 	private LocalDate fechaUltimaAct;
 	private Cliente cliente;
-	private Set<Articulo> articulos;
+	private List<Articulo> articulos;
 	
 	public Carrito(Cliente cliente) {
 		this.cliente = cliente;
 		fechaCreacion = LocalDate.now();
 		fechaUltimaAct = LocalDate.now();
-		articulos = new HashSet<Articulo>();
+		articulos = new ArrayList<Articulo>();
 	}
 
 	public Integer getCantidad() {
 		return articulos.size();
 	}
 	
-	public Double getTotal() {
-		Double resultado = 0D;
+	public BigDecimal getTotal() {
+		BigDecimal resultado = BigDecimal.ZERO;
 		for (Articulo articulo : articulos) {
-			resultado += articulo.getPrecio();
+			resultado = resultado.add(articulo.getPrecio());
 		}
 		return resultado;
 	}
 	
-	public Double getPrecioMedio() {
+	public BigDecimal getPrecioMedio() {
 		if (articulos.isEmpty()) {
-			return 0D;
+			return BigDecimal.ZERO;
 		}
-		return getTotal()/getCantidad();
+		BigDecimal cantidad = new BigDecimal(getCantidad());
+		return getTotal().divide(cantidad, 2, RoundingMode.HALF_DOWN);
 	}
 	
 	@Override
@@ -52,8 +54,8 @@ public class Carrito {
 		articulos.add(articulo);
 		fechaUltimaAct = LocalDate.now();
 	}
-	public void borrarArticulo(Articulo articulo) {
-		articulos.remove(articulo);
+	public void borrarArticulo(int posicion) {
+		articulos.remove(posicion);
 		fechaUltimaAct = LocalDate.now();
 	}
 	public void vaciarCesta() {
@@ -73,9 +75,10 @@ public class Carrito {
 		return cliente;
 	}
 
-	public Set<Articulo> getArticulos() {
+	public List<Articulo> getArticulos() {
 		return articulos;
 	}
+
 	
 
 	
