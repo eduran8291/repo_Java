@@ -1,4 +1,4 @@
-package Ejercicio2;
+package Ejercicio2y3;
 
 
 public class Movil extends Telefono{

@@ -1,4 +1,4 @@
-package Ejercicio2;
+package Ejercicio2y3;
 
 public class Fijo extends Telefono {
 	private String direccion;

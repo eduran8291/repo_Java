@@ -1,4 +1,4 @@
-package Ejercicio2;
+package Ejercicio2y3;
 
 import java.math.BigDecimal;
 
