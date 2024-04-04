@@ -1,10 +1,8 @@
-package Ejercicios_1y2;
+package Ejercicios1_2_3_4_5;
 
 import java.util.Scanner;
 
-import Ejercicio3.SacoNumeros;
-
-public class Ej1y2 {
+public class AppSaco {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
