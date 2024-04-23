@@ -46,10 +46,6 @@ public class Persona {
 				+ fechaNacimiento + "]";
 	}
 
-	private String dni;
-		+ fechaNacimiento();
-
-
 	public void validar() throws DatosIncompletosException {
 		if (dni == null || dni.isBlank()) {
 			throw new DatosIncompletosException("El DNI no puede ser vacío");
@@ -71,4 +67,4 @@ public class Persona {
 
 }
 
-}
+

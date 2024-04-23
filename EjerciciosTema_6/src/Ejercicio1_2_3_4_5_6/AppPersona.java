@@ -79,7 +79,7 @@ public class AppPersona {
 		try {
 			System.out.println("Dime un filtro para buscar personas:");
 			String filtro = sc.nextLine();
-			List<Persona> resultados = service.buscarPersonas(filtro);
+			List<Persona> resultados = service.consultarPersona(filtro);
 			System.out.println("Personas encontradas:");
 			for (Persona p : resultados) {
 				System.out.println(p);
@@ -90,40 +90,6 @@ public class AppPersona {
 		}
 		
 	}
-
-	private static void consultarPorDni() throws ErrorException {
-		Persona persona = null;
-		do {
-			
-			System.out.println("Dime qué DNI quieres consultar:");
-			String dni = sc.nextLine();
-			try {
-				persona = service.consultarPersona(dni);
-				System.out.println("Esta es la persona que buscas");
-				System.out.println(persona);
-			}
-			catch (PersonaNoExisteException e) {
-				System.out.println(e.getMessage());
-			}
-		}
-		while(persona == null);
-		
-	}
-
-	private static Integer mostrarMenu() {
-		System.out.println("Menú:");
-		System.out.println("\t1. Consultar por DNI");
-		System.out.println("\t2. Consultar por filtro");
-		System.out.println("\t3. Insertar nueva persona");
-		System.out.println("\t0. Salir");
-		Integer opcion = sc.nextInt();
-		sc.nextLine();
-		return opcion;
-	}
-
-}
-
-
 
 	private static void consultarPorDni() throws ErrorException, PersonaNoExisteException {
 		Persona persona = null;
@@ -156,3 +122,6 @@ public class AppPersona {
 	}
 
 }
+
+
+
