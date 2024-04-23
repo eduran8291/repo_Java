@@ -1,4 +1,4 @@
-package Ejercicio1_2_3;
+package Ejercicio1_2_3_4_5_6;
 
 public class NoExistePersonaException extends Exception {
 
